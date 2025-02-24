@@ -24,6 +24,6 @@ app.all("*",(req,res)=>{
 })
 
 const PORT = process.env.PORT || 3005;
-app.listen(PORT, () => {
+app.listen(3000, () => {
   console.log(`Server running on port ${PORT}`);
 });
