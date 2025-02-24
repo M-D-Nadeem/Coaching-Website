@@ -9,9 +9,12 @@ dotenv.config()
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin:"https://coaching-website-frontend.vercel.app/",
+    origin:"https://coaching-website-frontend.vercel.app",
     // credentials:true
 }))
+
+app.options('*', cors())
+
 
 app.use("/ping",(req,res)=>{
   res.send("PONG")
